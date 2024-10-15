@@ -23,7 +23,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.0.0"),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", from: "4.0.0"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .exact("5.0.0")),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.1.0")
     ],
     targets: [
@@ -50,7 +50,7 @@ let package = Package(
             ]),
         .target(
             name: "ImageSlideshowAlamofire",
-            dependencies: ["ImageSlideshow", "AlamofireImage"],
+            dependencies: ["ImageSlideshow", "Alamofire"],
             path: "ImageSlideshow/Classes/InputSources",
             sources: ["AlamofireSource.swift"]),
         .target(
